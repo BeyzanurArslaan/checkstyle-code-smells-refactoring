@@ -1,79 +1,88 @@
-# Technical Debt Analysis using SonarQube
+# 🔍 Checkstyle Code Smells Detection & Refactoring
 
-## Overview
+## 📖 Overview
 
-This repository presents a technical debt analysis of the Checkstyle project using SonarQube.
+This project presents a code smell detection and refactoring study conducted on the Checkstyle open-source project as part of the Software Design Patterns course.
 
-The study evaluates maintainability, reliability, security, code smells, technical debt, and test coverage.
-
----
-
-## Objectives
-
-- Analyze technical debt
-- Evaluate software quality metrics
-- Identify maintainability issues
-- Recommend refactoring strategies
+The Ptidej tool was used to identify design issues, and selected code smells were analyzed and refactored to improve software maintainability, readability, and code quality.
 
 ---
 
-## Technologies
+## 🎯 Objectives
 
-- SonarQube
+- Detect code smells using Ptidej
+- Analyze the most significant design issues
+- Refactor selected code smells
+- Improve maintainability through refactoring
+
+---
+
+## 🛠 Technologies
+
 - Java
+- Maven
 - Checkstyle
+- Ptidej
+- IntelliJ IDEA
+- Git
 
 ---
 
-## Analysis Summary
+## 📊 Code Smells Detected
 
-The project analysis identified:
-
-- 162 total issues
-- 144 Code Smells
-- 16 Bugs
-- 2 Security Issues
-- Technical Debt: 8 Days
-- Test Coverage: 0%
-
----
-
-## Main Findings
-
-The most critical issues include:
-
-- High Cognitive Complexity
-- God Classes
-- Missing Test Coverage
-- Security Vulnerabilities
+| Code Smell | Instances |
+|------------|----------:|
+| ParentClassProvidesProtectedDetection | 399 |
+| MethodNoParameterDetection | 387 |
+| NotAbstract | 383 |
+| NoPolymorphism | 369 |
+| TwoInheritanceDetection | 291 |
+| ChildClassDetection | 107 |
+| DataClass | 44 |
+| LargeClassDetection | 22 |
 
 ---
 
-## Recommended Refactorings
+## ♻ Refactoring
 
-- Extract Method
-- Extract Class
-- Dependency Injection
-- Characterization Testing
+### Example 1 – FewMethodsDetection
+
+The unnecessary `FinallyHandler` class was removed and its responsibilities were integrated into `BlockParentHandler`, reducing unnecessary abstraction and improving maintainability.
+
+### Example 2 – ClassOneMethod
+
+The `IndexHandler` class originally contained only one empty method. It was enhanced by adding meaningful functionality and a helper method, eliminating the code smell.
 
 ---
 
-## Report
+## 📂 Repository Structure
 
+```text
+report/
+Design_Queens_Ass2_Code/
+refactored-files/
 ```
-docs/Design_Queens_Ass3_Report.pdf
-```
 
 ---
 
-## Project Status
+## 📄 Report
 
-Completed as part of the Software Design Patterns course.
+
+The complete report is available in the `report` folder.
+
+If GitHub cannot preview the PDF, download the file locally to view it.
+
+The complete project report is available in:
+
+`report/Checkstyle_Code_Smells_Refactoring_Report.pdf`
+
 
 ---
 
-## Authors
+## 👩‍💻 Author
 
-Software Design Patterns Course Project
+**Beyzanur Arslan**
+
+Software Design Patterns – Assignment 2
 
 2026
